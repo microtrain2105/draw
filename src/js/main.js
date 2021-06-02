@@ -162,18 +162,20 @@ var draw = (function() {
       //Draw a line
       drawLine: function() {
         //Start by using random fill colors.
-        ctx.strokeStyle = '#'+Math.floor(Math.random()*16777215).toString(16);
+        // ctx.strokeStyle = '#'+Math.floor(Math.random()*16777215).toString(16);
+        ctx.strokeStyle = this.getStrokeColor();
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.stroke();
       },
   
-  
+      //Draw a path
       drawPath: function() {
         //console.log({x1:x,y1:y,x2:x2,y2:y2});
         //Start by using random fill colors.
-        ctx.strokeStyle = '#'+Math.floor(Math.random()*16777215).toString(16);
+        ctx.strokeStyle = this.getStrokeColor();
+        // ctx.strokeStyle = '#'+Math.floor(Math.random()*16777215).toString(16);
         ctx.beginPath();
         ctx.moveTo(lx, ly);
         ctx.lineTo(x, y);
